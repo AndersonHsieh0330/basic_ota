@@ -106,10 +106,11 @@ C {lab_pin.sym} 40 -270 0 0 {name=p2 sig_type=std_logic lab=vip}
 C {lab_pin.sym} 460 -270 0 1 {name=p3 sig_type=std_logic lab=vin}
 C {lab_pin.sym} 180 -130 0 0 {name=p4 sig_type=std_logic lab=vb}
 C {lab_pin.sym} 250 -40 0 0 {name=p5 sig_type=std_logic lab=vss}
-C {lab_pin.sym} 250 -270 2 0 {name=p1 sig_type=std_logic lab=vss}
-C {lab_pin.sym} 250 -520 0 0 {name=p6 sig_type=std_logic lab=vdd}
-C {ipin.sym} 690 -410 0 0 {name=p7 lab=vin}
-C {opin.sym} 670 -450 0 0 {name=p8 lab=vout}
+C {lab_pin.sym} 250 -270 3 0 {name=p1 sig_type=std_logic lab=vss}
+C {lab_pin.sym} 250 -520 1 0 {name=p6 sig_type=std_logic lab=vdd}
+C {ipin.sym} 690 -390 0 0 {name=p7 lab=vin}
+C {opin.sym} 670 -430 0 0 {name=p8 lab=vout}
 C {lab_pin.sym} 390 -350 0 1 {name=p9 sig_type=std_logic lab=vout}
-C {ipin.sym} 690 -430 0 0 {name=p10 lab=vip}
-C {ipin.sym} 690 -390 0 0 {name=p11 lab=vb}
+C {ipin.sym} 690 -410 0 0 {name=p10 lab=vip}
+C {ipin.sym} 690 -350 0 0 {name=p12 lab=vdd}
+C {ipin.sym} 690 -370 0 0 {name=p14 lab=vss}
