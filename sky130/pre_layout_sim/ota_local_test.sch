@@ -7,17 +7,17 @@ E {}
 N 110 -520 370 -520 {lab=vdd}
 N 110 -520 110 -450 {lab=vdd}
 N 390 -520 390 -450 {lab=vdd}
-N 150 -420 330 -420 {lab=#net1}
-N 110 -390 110 -300 {lab=#net1}
+N 150 -420 330 -420 {lab=n2}
+N 110 -390 110 -300 {lab=n2}
 N 390 -390 390 -300 {lab=vout}
-N 110 -340 230 -340 {lab=#net1}
-N 230 -420 230 -340 {lab=#net1}
-N 330 -420 350 -420 {lab=#net1}
+N 110 -340 230 -340 {lab=n2}
+N 230 -420 230 -340 {lab=n2}
+N 330 -420 350 -420 {lab=n2}
 N 370 -520 390 -520 {lab=vdd}
-N 110 -240 110 -200 {lab=#net2}
-N 110 -200 390 -200 {lab=#net2}
-N 390 -240 390 -200 {lab=#net2}
-N 250 -200 250 -160 {lab=#net2}
+N 110 -240 110 -200 {lab=n1}
+N 110 -200 390 -200 {lab=n1}
+N 390 -240 390 -200 {lab=n1}
+N 250 -200 250 -160 {lab=n1}
 N 250 -100 250 -40 {lab=vss}
 N 390 -520 410 -520 {lab=vdd}
 N 410 -520 410 -420 {lab=vdd}
@@ -40,17 +40,22 @@ N 700 -120 700 -80 {lab=vss}
 N 770 -220 770 -180 {lab=vi}
 N 770 -120 770 -80 {lab=vss}
 N 830 -120 830 -80 {lab=vss}
-N 830 -220 830 -180 {lab=#net3}
-N 830 -220 960 -220 {lab=#net3}
-N 960 -240 960 -200 {lab=#net3}
+N 830 -220 830 -180 {lab=#net1}
+N 830 -220 960 -220 {lab=#net1}
+N 960 -240 960 -200 {lab=#net1}
 N 900 -250 920 -250 {lab=vss}
 N 900 -150 920 -150 {lab=vss}
 N 900 -190 920 -190 {lab=vi}
 N 900 -290 920 -290 {lab=vi}
 N 960 -320 960 -300 {lab=vip}
 N 960 -140 960 -120 {lab=vin}
+N 1040 -200 1040 -180 {lab=vb}
+N 1040 -120 1040 -80 {lab=vss}
+N 1040 -220 1040 -200 {lab=vb}
+N 960 -120 960 -100 {lab=vin}
+N 960 -340 960 -320 {lab=vip}
 C {sky130_fd_pr/nfet_01v8.sym} 90 -270 0 0 {name=M1
-W=1
+W=3
 L=0.15
 nf=1 
 mult=1
@@ -64,7 +69,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 410 -270 0 1 {name=M2
-W=1
+W=3
 L=0.15
 nf=1 
 mult=1
@@ -128,7 +133,7 @@ C {lab_pin.sym} 250 -520 1 0 {name=p6 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} 390 -350 0 1 {name=p9 sig_type=std_logic lab=vout}
 C {vsource.sym} 630 -150 0 0 {name=V1 value=0 savecurrent=false}
 C {vsource.sym} 700 -150 0 0 {name=V2 value=1.8 savecurrent=false}
-C {vsource.sym} 770 -150 0 0 {name=V3 value=3 savecurrent=false}
+C {vsource.sym} 770 -150 0 0 {name=V3 value=0 savecurrent=false}
 C {gnd.sym} 630 -80 0 0 {name=l1 lab=GND}
 C {vcvs.sym} 960 -270 0 0 {name=E1 value=0.5}
 C {vsource.sym} 830 -150 0 0 {name=V4 value=0.9 savecurrent=false}
@@ -143,9 +148,21 @@ C {lab_wire.sym} 900 -150 2 1 {name=p19 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 900 -250 2 1 {name=p20 sig_type=std_logic lab=vss}
 C {lab_wire.sym} 900 -190 2 1 {name=p21 sig_type=std_logic lab=vi}
 C {lab_wire.sym} 900 -290 2 1 {name=p22 sig_type=std_logic lab=vi}
-C {lab_wire.sym} 960 -320 0 0 {name=p23 sig_type=std_logic lab=vip}
-C {lab_wire.sym} 960 -120 2 1 {name=p24 sig_type=std_logic lab=vin}
-C {code.sym} 580 -490 0 0 {name=STIMULI only_toplevel=false value=}
+C {lab_wire.sym} 960 -340 0 0 {name=p23 sig_type=std_logic lab=vip}
+C {lab_wire.sym} 960 -100 2 1 {name=p24 sig_type=std_logic lab=vin}
+C {code.sym} 580 -490 0 0 {name=STIMULI only_toplevel=false
+value="
+.control
+save all 
+save @m.xm1.msky130_fd_pr__nfet_01v8[id] @m.xm1.msky130_fd_pr__nfet_01v8[gm]
+save @m.xm2.msky130_fd_pr__nfet_01v8[id] @m.xm2.msky130_fd_pr__nfet_01v8[gm]
+save @m.xm3.msky130_fd_pr__nfet_01v8[id] @m.xm3.msky130_fd_pr__nfet_01v8[gm]
+save @m.xm5.msky130_fd_pr__pfet_01v8[id] @m.xm5.msky130_fd_pr__pfet_01v8[gm]
+save @m.xm6.msky130_fd_pr__pfet_01v8[id] @m.xm6.msky130_fd_pr__pfet_01v8[gm]
+op
+write ota_local_test.raw
+.endc
+"}
 C {devices/code.sym} 720 -490 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -154,4 +171,9 @@ value="
 .lib $::SKYWATER_MODELS/sky130.lib.spice tt
 "
 spice_ignore=false}
-C {sky130_fd_pr/corner.sym} 860 -490 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {lab_wire.sym} 250 -200 0 0 {name=p7 sig_type=std_logic lab=n1}
+C {lab_wire.sym} 110 -340 0 0 {name=p8 sig_type=std_logic lab=n2
+}
+C {vsource.sym} 1040 -150 0 0 {name=V5 value=0.5 savecurrent=false}
+C {lab_wire.sym} 1040 -220 0 0 {name=p10 sig_type=std_logic lab=vb}
+C {lab_wire.sym} 1040 -80 2 0 {name=p12 sig_type=std_logic lab=vss}
