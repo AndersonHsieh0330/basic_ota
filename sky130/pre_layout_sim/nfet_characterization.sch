@@ -5,29 +5,28 @@ V {}
 S {}
 E {}
 B 2 630 -400 1430 0 {flags=graph
-y1=0
-y2=2
+y2=900e-6
 ypos1=0
 ypos2=2
 divy=5
 subdivy=4
 unity=1
-x1=0.45
-x2=3.45
+x1=0
+x2=3
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="i(@m.xm1.msky130_fd_pr__nfet_01v8[id])
-i(v2)"
-color="4 5"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 rawfile=/home/andersonhsieh/repo/basic_ota/sky130/pre_layout_sim/nfet_characterization.raw
 sim_type=dc
-autoload=1}
+autoload=1
+color=4
+node=i(@m.xm1.msky130_fd_pr__nfet_01v8[id])
+y1=0}
 T {https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutu.be%2FYUA_I55k-tM%3Ffeature%3Dshared&h=AT2366XhDZ53dwzXIL50vkuh2T0CvmGH3atvANJw0J00pC0ksaaLay0Aqug_wYkOkhluP2xwrdiTFEGC-Ye3YxWcrMFrEEZ-lNh6M0sroIO8fbJ6w0tVKeZoH0PBDQ} 10 -460 0 0 0.2 0.2 {}
 N 80 -190 80 -140 {lab=#net1}
 N 80 -200 80 -190 {lab=#net1}
