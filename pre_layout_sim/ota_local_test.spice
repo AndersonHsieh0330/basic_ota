@@ -11,7 +11,7 @@ XM5 vdd n2 vout vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2
 XM6 vdd n2 n2 vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1
 + m=1
 V1 vss GND 0
-V2 vdd vss 1.8
+V2 vdd vss 3.3
 V3 vi vss 0
 E1 vip net1 vi vss 0.5
 V4 net1 vss 0.9

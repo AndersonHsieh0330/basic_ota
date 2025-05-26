@@ -1,0 +1,66 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1748234234
+<< error_s >>
+rect 1238 378 1296 384
+rect 822 370 880 376
+rect 822 336 834 370
+rect 1238 344 1250 378
+rect 1238 338 1296 344
+rect 822 330 880 336
+rect 1238 68 1296 74
+rect 822 60 880 66
+rect 822 26 834 60
+rect 1238 34 1250 68
+rect 1238 28 1296 34
+rect 822 20 880 26
+rect 822 -430 880 -424
+rect 1244 -430 1302 -424
+rect 822 -464 834 -430
+rect 1244 -464 1256 -430
+rect 822 -470 880 -464
+rect 1244 -470 1302 -464
+rect 822 -758 880 -752
+rect 1244 -758 1302 -752
+rect 822 -792 834 -758
+rect 1244 -792 1256 -758
+rect 822 -798 880 -792
+rect 1244 -798 1302 -792
+rect 1274 -1426 1332 -1420
+rect 816 -1434 874 -1428
+rect 816 -1468 828 -1434
+rect 1274 -1460 1286 -1426
+rect 1274 -1466 1332 -1460
+rect 816 -1474 874 -1468
+rect 1274 -1736 1332 -1730
+rect 816 -1744 874 -1738
+rect 816 -1778 828 -1744
+rect 1274 -1770 1286 -1736
+rect 1274 -1776 1332 -1770
+rect 816 -1784 874 -1778
+use sky130_fd_pr__nfet_01v8_BZQWLS  XM1
+timestamp 1748234234
+transform 1 0 851 0 1 198
+box -211 -310 211 310
+use sky130_fd_pr__nfet_01v8_BZQWLS  XM2
+timestamp 1748234234
+transform 1 0 1267 0 1 206
+box -211 -310 211 310
+use sky130_fd_pr__nfet_01v8_BZQWLS  XM3
+timestamp 1748234234
+transform 1 0 1303 0 1 -1598
+box -211 -310 211 310
+use sky130_fd_pr__nfet_01v8_BZQWLS  XM4
+timestamp 1748234234
+transform 1 0 845 0 1 -1606
+box -211 -310 211 310
+use sky130_fd_pr__pfet_01v8_8LSETJ  XM5
+timestamp 1748234234
+transform 1 0 851 0 1 -611
+box -211 -319 211 319
+use sky130_fd_pr__pfet_01v8_8LSETJ  XM6
+timestamp 1748234234
+transform 1 0 1273 0 1 -611
+box -211 -319 211 319
+<< end >>
